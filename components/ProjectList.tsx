@@ -4,8 +4,7 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
-  github: string;
-  demo: string;
+  link?: string;
 }
 
 interface ProjectListProps {
@@ -21,8 +20,7 @@ export default function ProjectList({ projects }: ProjectListProps) {
           title={project.title}
           description={project.description}
           technologies={project.technologies}
-          github={project.github}
-          demo={project.demo}
+          link={project.link}
         />
       ))}
     </div>

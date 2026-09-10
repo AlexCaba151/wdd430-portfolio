@@ -1,21 +1,19 @@
-import ProjectList from "@/components/ProjectList";
+ import ProjectList from "@/components/ProjectList";
 
 const projects = [
   {
     title: "Barber Website",
     description:
-      "A modern and responsive website created for a barbershop to showcase its services, information, and online presence.",
+      "A modern and responsive website created for a barbershop to showcase its services, information, and online presence. The project is also deployed as a live web application.",
     technologies: ["Web Development", "Responsive Design"],
-    github: "https://github.com/AlexCaba151/barber-website",
-    demo: "https://barber-website-rosy.vercel.app/",
+    link: "https://github.com/AlexCaba151/barber-website",
   },
   {
     title: "XYM Tech",
     description:
-      "A professional technology company website designed to present the company, its services, and digital solutions to potential clients.",
+      "A professional technology company website designed to present the company, its services, and digital solutions to potential clients. The project is deployed as a live website.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/AlexCaba151/XymtechProject",
-    demo: "https://www.xymtechcorp.com/",
+    link: "https://github.com/AlexCaba151/XymtechProject",
   },
 ];
 
@@ -64,7 +62,7 @@ export default function Home() {
             Portfolio
           </p>
 
-          <h2 className="mt-2 text-3xl font-bold text-white-900">
+          <h2 className="mt-2 text-3xl font-bold text-slate-900">
             Featured Projects
           </h2>
 

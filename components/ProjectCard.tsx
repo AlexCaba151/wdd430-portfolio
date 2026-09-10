@@ -1,17 +1,15 @@
-interface ProjectCardProps {
+ interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
-  github: string;
-  demo: string;
+  link?: string;
 }
 
 export default function ProjectCard({
   title,
   description,
   technologies,
-  github,
-  demo,
+  link,
 }: ProjectCardProps) {
   return (
     <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -34,25 +32,18 @@ export default function ProjectCard({
         </div>
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-3">
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700"
-        >
-          GitHub
-        </a>
-
-        <a
-          href={demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100"
-        >
-          Live Demo
-        </a>
-      </div>
+      {link && (
+        <div className="mt-6">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700"
+          >
+            View Project
+          </a>
+        </div>
+      )}
     </article>
   );
 }
