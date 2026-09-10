@@ -4,7 +4,7 @@ const skills = [
   {
     name: "Next.js",
     description:
-      "Building modern web applications with the App Router and React.",
+      "Building modern web applications using the App Router and React.",
   },
   {
     name: "TypeScript",
@@ -19,16 +19,15 @@ const skills = [
   {
     name: "Data Analysis",
     description:
-      "Working with data to create useful insights and better decisions.",
+      "Working with data to generate useful insights and support better decisions.",
   },
 ];
 
 export default function About() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-      {/* Introduction */}
       <section className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
           About Me
         </p>
 
@@ -43,7 +42,6 @@ export default function About() {
         </p>
       </section>
 
-      {/* Skills */}
       <section className="mt-16">
         <h2 className="text-2xl font-bold text-white-900">
           Technical Skills

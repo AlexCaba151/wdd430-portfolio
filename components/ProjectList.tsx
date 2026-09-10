@@ -1,11 +1,11 @@
-
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
 
 interface Project {
   title: string;
   description: string;
   technologies: string[];
-  link?: string;
+  github: string;
+  demo: string;
 }
 
 interface ProjectListProps {
@@ -14,10 +14,17 @@ interface ProjectListProps {
 
 export default function ProjectList({ projects }: ProjectListProps) {
   return (
-    <section className="grid gap-6 md:grid-cols-2">
+    <div className="grid gap-6 md:grid-cols-2">
       {projects.map((project) => (
-        <ProjectCard key={project.title} {...project} />
+        <ProjectCard
+          key={project.title}
+          title={project.title}
+          description={project.description}
+          technologies={project.technologies}
+          github={project.github}
+          demo={project.demo}
+        />
       ))}
-    </section>
+    </div>
   );
 }
